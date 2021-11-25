@@ -10,6 +10,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+// 引入fontawesome字体图标
+// 使用方法字体图标请参考官网
+import 'font-awesome/css/font-awesome.min.css'
+
 
 // 将axios使用 作为一个全局的配置
 Vue.use(VueAxios,axios)
