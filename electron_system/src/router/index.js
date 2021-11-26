@@ -6,12 +6,21 @@ Vue.use(VueRouter)
 
 
 const router = new VueRouter({
- routes:[
-   {
-     path:'/',
-     component:() => import('../views/Home.vue')
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      redirect: '/login'
+    },
+    {
+      path: '/home',
+      component: () => import('../views/Home.vue')
+    },
+    {
+      path: "/login",
+      component: () => import('../views/Login.vue')
     }
- ]
+  ]
 })
 
 export default router

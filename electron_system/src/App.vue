@@ -16,6 +16,10 @@ export default {
   padding: 0;
   margin: 0;
 }
+html,body,.app {
+  width: 100%;
+  height: 100%;
+}
 ul,li {
   list-style: none;
 }
