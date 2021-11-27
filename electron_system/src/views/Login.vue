@@ -19,8 +19,8 @@
 
       <el-form-item label-width="0" class="right">
         <el-button type="primary" @click="onSubmit">登录</el-button>
-        <el-button>取消</el-button>
-      </el-form-item>
+        <el-button>重置</el-button>
+      </el-form-item> 
     </el-form>
   </div>
 </template>
