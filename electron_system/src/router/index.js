@@ -27,7 +27,35 @@ const router = new VueRouter({
         },
         {
           path:'users',
-          component:()=>import('../components/mainPages/UserManagement.vue')
+          component:()=>import('../components/mainPages/user/UserManagement.vue')
+        },
+        {
+          path:'roles',
+          component:()=>import('../components/mainPages/rights/RoleList.vue')
+        },
+        {
+          path:'rights',
+          component:()=>import('../components/mainPages/rights/PermissionList.vue')
+        },
+        {
+          path:'goods',
+          component:()=>import('../components/mainPages/goods/ProductList.vue')
+        },
+        {
+          path:'params',
+          component:()=>import('../components/mainPages/goods/ClassificationParams.vue')
+        },
+        {
+          path:"categories",
+          component:()=>import('../components/mainPages/goods/CommodityClassification.vue')
+        },
+        {
+          path:"orders",
+          component:()=>import('../components/mainPages/order/OderList.vue')
+        },
+        {
+          path:"reports",
+          component:()=>import('../components/mainPages/data/DataReport.vue')
         }
       ]
     },

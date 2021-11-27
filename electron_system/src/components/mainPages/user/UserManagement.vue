@@ -28,8 +28,8 @@
           <el-table-column label="操作" width="185">
             <template slot-scope="scope">
                 <el-button type="primary" icon="el-icon-edit" @click="edit(scope.$index,scope.row)" size="mini"></el-button>
-                <el-button type="danger" icon="el-icon-delete"  size="mini"></el-button>
-                 <el-button type="warning" icon="el-icon-star-off"  size="mini"></el-button>
+                <el-button type="danger" icon="el-icon-delete" @click="delete_(scope.$index,scope.row)" size="mini"></el-button>
+                 <el-button type="warning" icon="el-icon-star-off" @click="set_(scope.$index,scope.row)" size="mini"></el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -40,9 +40,9 @@
 
 <script>
 // 引入封装的http请求
-import http from "../../assets/http/http";
+import http from "../../../assets/http/http";
 // 引入面包屑组件
-import BreadCrumb from "../BreadCrumb.vue";
+import BreadCrumb from "../../BreadCrumb.vue";
 export default {
   data() {
     return {
@@ -52,6 +52,7 @@ export default {
     };
   },
   mounted() {
+    // 请求用户列表
     http({
       url: "users",
       params: {
@@ -101,5 +102,8 @@ export default {
 .operation {
     width: 44px;
     height: 28px;
+}
+.table {
+  margin-top: 15px;
 }
 </style>
